@@ -1,0 +1,8 @@
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/obj/Debug/netcoreapp2.2/CustomComponents.csprojAssemblyReference.cache
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/obj/Debug/netcoreapp2.2/CustomComponents.AssemblyInfoInputs.cache
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/obj/Debug/netcoreapp2.2/CustomComponents.AssemblyInfo.cs
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/bin/Debug/netcoreapp2.2/CustomComponents.deps.json
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/bin/Debug/netcoreapp2.2/CustomComponents.dll
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/bin/Debug/netcoreapp2.2/CustomComponents.pdb
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/obj/Debug/netcoreapp2.2/CustomComponents.dll
+/Users/jaime/Projects/Home rent estimate/Platform_Engineer_Take_Home_Project/CustomComponents/obj/Debug/netcoreapp2.2/CustomComponents.pdb

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jaime A Banda">
+    <meta name="description" content="Free rent estimate for your house">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/lib/font.awesome/5.11.1/Content/Content/fontawesome-all.css">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="~/js/html5shiv/Content/Scripts/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!--<link rel="stylesheet" href="css/responsive.css">-->
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </environment>
+    <link rel="stylesheet" href="~/css/main.css">
+    <title>@ViewData["Title"] - MiCasa</title>
+</head>
+<body>
+    <header class="tr-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="fa fa-align-justify"></i></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img class="img-fluid" src="~/img/logo.png" alt="Logo"></a>
+                </div>
+                <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav">
+                        <li class="tr-dropdown"><a href="#">Buy</a></li>
+                        <li><a href="#">Rent</a></li>
+                        <li><a href="#">Sell</a></li>
+                        <li><a href="#">Home loans</a></li>
+                        <li><a href="#">View Registration</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-right">
+                    <div class="dropdown tr-change-dropdown">
+                        <i class="fas fa-globe-americas"></i>
+                        <a data-toggle="dropdown" href="#" aria-expanded="false"><span class="change-text">United States</span><i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu tr-change tr-list">
+                            <li><a href="#">United States</a></li>
+                            <li><a href="#">Canda</a></li>
+                            <li><a href="#">México</a></li>
+                        </ul>
+                    </div><!-- /.language-dropdown -->
+                    <ul class="sign-in tr-list">
+                        <li><i class="fa fa-user"></i></li>
+                        <li><a href="#"> Sign In </a></li>
+                    </ul><!-- /.sign-in -->
+
+                    <a href="#" class="btn btn-primary">Free Rent estimate</a>
+                </div><!-- /.nav-right -->
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+    </header>
+
+    <partial name="_CookieConsentPartial" />
+    @RenderBody()
+
+    <footer class="footer-top section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <h3>About Us</h3>
+                        <ul class="tr-list">
+                            <li><a href="#">About MiCasa</a></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">International Partners</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <h3>Job MiCasa</h3>
+                        <ul class="tr-list">
+                            <li><a href="#">Create Account</a></li>
+                            <li><a href="#">Career Counseling</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Video Guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <h3>Partners</h3>
+                        <ul class="tr-list">
+                            <li><a href="#">YouSell</a></li>
+                            <li><a href="#">Mamalon</a></li>
+                            <li><a href="#">Pelicano</a></li>
+                            <li><a href="#">HouseClub709</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <p>Susbscribe and receive the last posts!</p>
+                        <form class="contact-form" method="post" action="#">
+                            <div class="form-group">
+                                <input type="email" class="form-control" required="required" placeholder="Your email Id">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </footer>
+
+
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/popper.js/1.14.3/content/Scripts/umd/popper.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                asp-fallback-src="~/lib/popper.js/1.14.3/content/Scripts/popper.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

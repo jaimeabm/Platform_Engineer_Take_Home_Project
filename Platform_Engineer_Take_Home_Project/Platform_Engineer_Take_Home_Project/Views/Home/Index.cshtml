@@ -1,0 +1,93 @@
+﻿@model Platform_Engineer_Take_Home_Project.Models.User
+@{
+    ViewData["Title"] = "Buy, rent or sell your house";
+}
+
+<div class="tr-breadcrumb bg-image section-before">
+    <div class="container">
+        <div class="breadcrumb-info text-center">
+            <div class="page-title">
+                <h1>Free Rent Estimate</h1>
+                <span>The power to know the true value of your house. MiCasa</span>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</div>
+
+<section class="tr-account section-padding">
+    <div class="container text-center">
+        <div class="user-account">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs  nav-justified" role="tablist">
+                <li role="presentation"><a class="active show" href="#seeker" aria-controls="seeker" role="tab" data-toggle="tab" aria-selected="true">Free Estimate</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active show" id="seeker">
+                    <div class="account-content">
+                        <form method="post" asp-action="Index" class="tr-form">
+                            <div asp-validation-summary="ModelOnly" class="text-danger">
+
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="FirstName" class="form-control" placeholder="First Name" required="required">
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="LastName" class="form-control" placeholder="Last Name" required="required">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Email" class="form-control" placeholder="Email" required="required">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Phone" class="form-control" placeholder="Phone" required="required">
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Address" class="form-control" placeholder="Address" required="required">
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="City" class="form-control" placeholder="City" required="required">
+                                <span asp-validation-for="City" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="State" class="form-control" placeholder="State" required="required">
+                                <span asp-validation-for="State" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Zip" class="form-control" placeholder="Zip" >
+                                <span asp-validation-for="Zip" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="RentExpected" class="form-control" asp-format="{0:#,###.00}" placeholder="$ Rent Expected" required="required">
+                                <span asp-validation-for="RentExpected" class="text-danger"></span>
+
+                            </div>
+                            <!--
+                            <div class="form-group">
+                                <input asp-for="Password" class="form-control" placeholder="Password" required="required">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" required="required">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            -->
+                            <button type="submit" class="btn btn-primary">Get Free Estimate</button>
+                        </form>
+                        @section Scripts{
+                            @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                        }
+
+                        <div class="new-user text-center">
+                            <span>Already Registered? <a href="#">Sign in</a> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- container -->
+</section>

@@ -1,0 +1,41 @@
+﻿@model Platform_Engineer_Take_Home_Project.Models.User
+
+@{
+    ViewData["Title"] = $"Welcome {@Model.FullName} to the Dashboard";
+}
+
+<main class="tr-profile section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3">
+                    <div class="tr-sidebar">
+                        <ul class="nav nav-tabs profile-tabs section" role="tablist">
+                            <li role="presentation"><a class="#" href="#account-info" aria-controls="account-info" role="tab" data-toggle="tab"><i class="fa fa-life-ring" aria-hidden="true"></i> Account Info</a></li>
+                            <li role="presentation"><a href="#" role="tab" data-toggle="tab"><span><i class="fas fa-envelope-open-text"></i></span> My Messages</a></li>
+                            <li role="presentation"><a href="#" role="tab" data-toggle="tab"><span><i class="fas fa-user-alt"></i></span> Contact an Agent</a></li>
+                            <li role="presentation"><a href="#" role="tab" data-toggle="tab"><span><i class="fas fa-dizzy"></i></span> Close Account</a></li>
+                        </ul>	        			
+                    </div><!-- /.tr-sidebar -->        		
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in show active account-info" id="account-info">	
+
+                            <div class="section display-information">
+                                <ul class="tr-list account-details">
+                                    <li>Display Name<span>@Model.FullName</span></li>
+                                    <li>Phone Number<span>@Model.Phone</span></li>
+                                    <li>Email Id<span><a href="#">@Model.Email</a></span></li>
+                                    <li>Address<span>@Model.FullAddress</span></li>
+                                    <li>Property price<span>$@Model.PropertyPrice</span></li>
+                                    <li>Rent expected<span>$@Model.RentExpected</span></li>
+                                    <li>Rent estimate of your house is<span>@Model.RangeRentEstimated</span></li>
+                                </ul>								
+                            </div>
+                        </div>
+                    </div>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Return to Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </main>
