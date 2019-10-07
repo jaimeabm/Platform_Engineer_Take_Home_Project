@@ -92,5 +92,5 @@ Stop ngrok and run it again with the following parameters:
 
 ```
 sudo docker exec -it sql1 ls /var/opt/mssql/data/
-sudo docker cp sql1:/var/opt/mssql/data/micasa-2019107-13-15-43.bak /temp
+sudo docker cp sql1:/var/opt/mssql/data/micasa-2019107-13-15-43.bak .
 ```
