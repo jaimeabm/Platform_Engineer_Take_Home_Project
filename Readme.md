@@ -94,3 +94,17 @@ Stop ngrok and run it again with the following parameters:
 sudo docker exec -it sql1 ls /var/opt/mssql/data/
 sudo docker cp sql1:/var/opt/mssql/data/micasa-2019107-13-15-43.bak .
 ```
+
+## How to publish the app from the command line
+
+Packs the application and its dependencies into a folder for deployment to a hosting system.
+
+`dotnet publish -c Release -o ./publish -r win-x64`
+
+**-c|--configuration {Debug|Release}**
+
+Defines the build configuration. The default value is Debug.
+
+**-r|--runtime <RUNTIME_IDENTIFIER>**
+
+Publishes the application for a given runtime. This is used when creating a self-contained deployment (SCD). 
